@@ -1,14 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BookForm } from "@/components/books/BookForm";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
-export default async function EditBookPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function EditBookPage(props: any) {
+  const { params } = props;
   const supabase = await createClient();
   const {
     data: { user },
