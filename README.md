@@ -3,6 +3,12 @@
 ![United Kingdom](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/gb.png "United Kingdom") Fullstack app to manage personal books. Allows user authentication and CRUD operations on books.  
 ![Spain](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/es.png "Spain") Aplicación fullstack para gestionar libros personales. Permite autenticación de usuarios y operaciones CRUD sobre libros.
 
+![image](https://github.com/user-attachments/assets/ebf72f16-ca31-4c7a-a522-ec15f5f792d6)
+
+![image](https://github.com/user-attachments/assets/7adcbbf3-6f70-45fe-bb02-1e3c935bddad)
+
+
+
 Built with / Desarrollada con: **Next.js**, **Supabase**, **Docker**
 
 
