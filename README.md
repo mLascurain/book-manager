@@ -16,8 +16,7 @@ Built with / Desarrollada con: **Next.js**, **Supabase**, **Docker**
 > ### 🚧 Requirements · Requisitos
 > 
 > - Node.js `>=18`  
-> - Docker  
-> - Supabase CLI (`npm install -g supabase`)  
+> - Docker   
 
 
 ### 📁 Run locally · Como correr en local
