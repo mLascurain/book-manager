@@ -1,5 +1,5 @@
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import {
   BookA,
@@ -135,25 +135,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
-      <footer
-        id="footer"
-        className="w-full flex items-center bg-primary/5 justify-center border-t mx-auto text-center text-xs gap-8 py-16"
-      >
-        <p>
-          {""}
-          <a
-            href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            mLascurain
-          </a>
-          {""} &copy; {new Date().getFullYear()}. All rights reserved.
-        </p>
-        <ThemeSwitcher />
-      </footer>
+      <Footer />
     </div>
   );
 }
