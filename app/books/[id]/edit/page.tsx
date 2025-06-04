@@ -37,7 +37,6 @@ export default async function EditBookPage({
   return (
     <main className="min-h-fit px-4 py-8">
       <div className="mx-auto max-w-2xl">
-        {/* Page Header */}
         <div className="mb-8 text-center">
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
             <BookOpen className="h-8 w-8 text-primary" />
@@ -48,7 +47,6 @@ export default async function EditBookPage({
           </p>
         </div>
 
-        {/* Form Card */}
         <Card className="w-50 mx-auto">
           <CardHeader>
             <CardTitle className="text-xl">Book Details</CardTitle>
@@ -58,7 +56,6 @@ export default async function EditBookPage({
           </CardContent>
         </Card>
 
-        {/* Form Help Text */}
         <div className="mt-4 text-center text-sm text-muted-foreground">
           <p>* Required fields</p>
         </div>

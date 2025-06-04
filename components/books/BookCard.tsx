@@ -46,7 +46,10 @@ export function BookCard({ book }: { book: Book }) {
     <Card className="flex flex-col transition-shadow hover:shadow-md">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2">
-          <CardTitle className="line-clamp-2 text-lg leading-tight">
+          <CardTitle
+            className="text-lg leading-tight truncate max-w-[10rem] sm:max-w-[14rem] md:max-w-[18rem]"
+            title={book.title}
+          >
             {book.title}
           </CardTitle>
           <Badge variant="secondary" className="shrink-0 text-xs">
@@ -57,7 +60,10 @@ export function BookCard({ book }: { book: Book }) {
 
       <CardContent className="flex-1 pb-3">
         <div className="space-y-2">
-          <p className="text-sm font-medium text-muted-foreground overflow-ellipsis overflow-hidden">
+          <p
+            className="text-sm font-medium text-muted-foreground truncate max-w-[10rem] sm:max-w-[14rem] md:max-w-[18rem]"
+            title={book.author}
+          >
             by {book.author}
           </p>
           <p className="text-sm text-muted-foreground">
@@ -73,7 +79,6 @@ export function BookCard({ book }: { book: Book }) {
             Edit
           </Button>
         </Link>
-        {/* Modal de confirmación */}
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button
