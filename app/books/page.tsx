@@ -5,7 +5,10 @@ import { BookList } from "@/components/books/BookList";
 
 export default async function BooksPage() {
   const supabase = await createClient();
-  const { data: { user }, error: userError } = await supabase.auth.getUser();
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
   if (userError || !user) redirect("/auth/login");
 
   const { data: books, error } = await supabase
@@ -19,14 +22,16 @@ export default async function BooksPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto py-8">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">My Books</h1>
-        <Link href="/books/new" className="btn btn-primary">
-          Add Book
-        </Link>
+    <>
+      <div className="max-w-2xl mx-auto py-8">
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold">My Books</h1>
+          <Link href="/books/new" className="btn btn-primary">
+            Add Book
+          </Link>
+        </div>
+        <BookList books={books || []} />
       </div>
-      <BookList books={books || []} />
-    </div>
+    </>
   );
 }
