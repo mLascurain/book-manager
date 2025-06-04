@@ -4,11 +4,11 @@ import { redirect } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
-export default async function EditBookPage({
-  params,
-}: {
+type Props = {
   params: { id: string };
-}) {
+};
+
+export default async function EditBookPage({ params }: Props) {
   const supabase = await createClient();
   const {
     data: { user },
