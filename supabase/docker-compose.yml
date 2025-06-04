@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  supabase-db:
+    image: supabase/postgres:15.1.0.79
+    restart: always
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./supabase/migrations:/docker-entrypoint-initdb.d
+      - supabase-data:/var/lib/postgresql/data
+
+  supabase-rest:
+    image: supabase/postgrest:latest
+    restart: always
+    ports:
+      - "54323:3000"
+    environment:
+      PGRST_DB_URI: postgres://postgres:postgres@supabase-db:5432/postgres
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_JWT_SECRET: your-super-secret-jwt
+
+volumes:
+  supabase-data:
+    driver: local
