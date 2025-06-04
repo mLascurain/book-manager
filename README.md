@@ -19,7 +19,7 @@ Built with / Desarrollada con: **Next.js**, **Supabase**, **Docker**
 #### 1. Clone the repository · Clonar el repo
 
 ```bash
-git clone https://github.com/your-user/book-manager.git
+git clone https://github.com/mLascurain/book-manager
 cd book-manager
 ```
 
