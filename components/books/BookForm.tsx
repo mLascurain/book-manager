@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Save } from "lucide-react";
+import { Save, Loader2 } from "lucide-react";
 
 const categories = [
   "Fiction",
@@ -181,14 +181,17 @@ export function BookForm({ userId, book }: BookFormProps) {
           className="flex-1"
           disabled={!isFormValid || isSubmitting}
         >
-          <Save className="mr-2 h-4 w-4" />
-          {isSubmitting
-            ? isEdit
-              ? "Updating..."
-              : "Saving..."
-            : isEdit
-            ? "Update Book"
-            : "Save Book"}
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              {isEdit ? "Updating..." : "Saving..."}
+            </>
+          ) : (
+            <>
+              <Save className="mr-2 h-4 w-4" />
+              {isEdit ? "Update Book" : "Save Book"}
+            </>
+          )}
         </Button>
         <Button
           type="button"

@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Edit, Trash2 } from "lucide-react";
+import { Edit, Trash2, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTransition, useState } from "react";
@@ -118,7 +118,14 @@ export function BookCard({ book }: { book: Book }) {
                   variant="destructive"
                   disabled={isPending}
                 >
-                  {isPending ? "Deleting..." : "Delete"}
+                  {isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Deleting...
+                    </>
+                  ) : (
+                    <>Delete</>
+                  )}
                 </Button>
               </DialogFooter>
             </form>
