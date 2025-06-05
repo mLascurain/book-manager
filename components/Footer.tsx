@@ -42,7 +42,7 @@ export function Footer() {
         </div>
         <div className="flex items-center justify-center gap-4">
           <Link
-            href="https://github.com/mlascurain/book-manager-mlascurain"
+            href="https://github.com/mlascurain/book-manager"
             target="_blank"
             className="hover:underline"
             rel="noreferrer"
