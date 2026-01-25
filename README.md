@@ -1,8 +1,8 @@
 ## 📚 Book Manager · Gestor de Libros
 
 > [!WARNING]  
-> #### ⚠️ The project is no longer receiving support
-> #### ⚠️ El proyecto ya no esta recibiendo soporte
+> #### ⚠️ 🇬🇧 The project is no longer receiving support
+> #### ⚠️ 🇪🇸 El proyecto ya no esta recibiendo soporte
 
 ![United Kingdom](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/gb.png "United Kingdom") Fullstack app to manage personal books. Allows user authentication and CRUD operations on books.  
 ![Spain](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/es.png "Spain") Aplicación fullstack para gestionar libros personales. Permite autenticación de usuarios y operaciones CRUD sobre libros.
